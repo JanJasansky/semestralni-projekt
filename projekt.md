@@ -8,5 +8,7 @@ Promile+ je aplikace pro odhad hladiny alkoholu v krvi na základě zadaných ú
 - Výpočet odhadovaného množství promile v krvi na základě zadaných údajů.
 - Zohlednění pohlaví, hmotnosti a doby pití.
 - Grafické zobrazení poklesu hladiny alkoholu v čase.
+
 - Upozornění na rizika a doporučení (např. kdy už je bezpečné řídit).
 - Možnost ukládat výsledky nebo historie pití (volitelně).
+![1761292813100](https://github.com/user-attachments/assets/fba6fa42-4f30-43a6-a2fb-fe72bb70a5eb)
