@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/AlcoholCalc.dir/src/main.cpp.o CMakeFiles/AlcoholCalc.dir/src/ConsoleUI.cpp.o CMakeFiles/AlcoholCalc.dir/src/TimeUtils.cpp.o CMakeFiles/AlcoholCalc.dir/src/BacModel.cpp.o CMakeFiles/AlcoholCalc.dir/src/Drink.cpp.o -o AlcoholCalc

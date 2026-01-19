@@ -1,14 +1,16 @@
-# Název projektu
-Alkoholová kalkulačka Promile+
+# AlcoholCalc (C++)
 
-## Krátký popis
-Promile+ je aplikace pro odhad hladiny alkoholu v krvi na základě zadaných údajů jako je množství vypitého alkoholu, čas, hmotnost, pohlaví a další faktory. Cílem aplikace je poskytnout uživateli přehledný odhad hladiny alkoholu a odhad, kdy bude opět "čistý".
+Konzolova aplikace pro odhad hladiny alkoholu v krvi (BAC, promile) v case.
+Uzivatel zada vahu/vysku, pohlavi a konkretni piti vcetne casu od-do. Program:
+- spocita orientacni krivku promile po minutach
+- najde maximum (peak)
+- odhadne cas poklesu pod 0.5 ‰, 0.2 ‰ a 0.0 ‰
+- vygeneruje CSV soubor pro vykresleni grafu
 
-## Funkce
-- Výpočet odhadovaného množství promile v krvi na základě zadaných údajů.
-- Zohlednění pohlaví, hmotnosti a doby pití.
-- Grafické zobrazení poklesu hladiny alkoholu v čase.
-
-- Upozornění na rizika a doporučení (např. kdy už je bezpečné řídit).
-- Možnost ukládat výsledky nebo historie pití (volitelně).
-
+## Build (CMake)
+```bash
+mkdir build
+cd build
+cmake ..
+cmake --build .
+./AlcoholCalc

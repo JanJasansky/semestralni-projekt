@@ -1,0 +1,3 @@
+/Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/CMakeFiles/AlcoholCalc.dir
+/Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/CMakeFiles/edit_cache.dir
+/Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/CMakeFiles/rebuild_cache.dir
