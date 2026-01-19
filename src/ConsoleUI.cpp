@@ -4,6 +4,10 @@
 #include <limits>
 #include <iomanip>
 #include <fstream>
+#include <thread>
+#include <chrono>
+#include <termios.h>
+#include <unistd.h>
 
 static void clearCin()
 {
@@ -51,34 +55,103 @@ static int inputValidatedInt(const std::string& prompt, int minValue, int maxVal
     }
 }
 
+static void setTerminalMode(bool enable)
+{
+    static struct termios oldt, newt;
+    if (enable)
+    {
+        tcgetattr(STDIN_FILENO, &oldt);
+        newt = oldt;
+        newt.c_lflag &= ~(ICANON | ECHO);
+        tcsetattr(STDIN_FILENO, TCSANOW, &newt);
+    }
+    else
+    {
+        tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
+    }
+}
+
+static int inputImmediateInt(const std::string& prompt, int minValue, int maxValue)
+{
+    std::cout << prompt;
+    setTerminalMode(true);
+    int value = 0;
+    char c;
+    while (true)
+    {
+        c = getchar();
+        if (c >= '0' && c <= '9')
+        {
+            value = value * 10 + (c - '0');
+            std::cout << c << std::flush;
+        }
+        else if (c == '\n' || c == '\r')
+        {
+            if (value >= minValue && value <= maxValue)
+            {
+                std::cout << "\n";
+                break;
+            }
+            else
+            {
+                std::cout << "\nNeplatny vstup. Zadejte cislo v rozsahu " << minValue << " - " << maxValue << ".\n";
+                value = 0;
+                std::cout << prompt;
+            }
+        }
+        else if (c == '\b' || c == 127) // Backspace
+        {
+            if (value > 0)
+            {
+                value /= 10;
+                std::cout << "\b \b" << std::flush;
+            }
+        }
+    }
+    setTerminalMode(false);
+    return value;
+}
+
+static void printWithDelay(const std::string& text, int delayMs = 50)
+{
+    for (char c : text)
+    {
+        if (std::cin.peek() == ' ') // Kontrola, zda uživatel stiskl mezerník
+        {
+            std::cin.ignore(); // Ignorování mezerníku
+            std::cout << text.substr(&c - &text[0]) << std::flush; // Okamžité vypsání zbytku textu
+            return;
+        }
+        std::cout << c << std::flush;
+        std::this_thread::sleep_for(std::chrono::milliseconds(delayMs));
+    }
+    std::cout << "\n";
+}
+
 Person ConsoleUI::inputPerson()
 {
     Person p;
 
-    std::cout << "=== Alkoholicka kalkulacka (odhad) ===\n\n";
-    while (true)
-    {
-        std::cout << "Zadej pohlavi (m/z): ";
-        char s{};
-        std::cin >> s;
-        clearCin();
+    printWithDelay("========================================");
+    printWithDelay("=== Vitejte v Alkoholicke kalkulacce ===");
+    printWithDelay("========================================\n");
+    printWithDelay("Tento program vam pomuze odhadnout hladinu alkoholu v krvi.");
+    printWithDelay("Zadejte sve udaje a informace o tom, co jste pili.\n");
 
-        if (s == 'z' || s == 'Z')
-        {
-            p.sex = Sex::Female;
-            p.eliminationRatePermilPerHour = 0.1; // Zeny maji obvykle nizsi odbouravani
-            break;
-        }
-        else if (s == 'm' || s == 'M')
-        {
-            p.sex = Sex::Male;
-            p.eliminationRatePermilPerHour = 0.15; // Muzi maji obvykle vyssi odbouravani
-            break;
-        }
-        else
-        {
-            std::cout << "Neplatny vstup. Zadejte 'm' pro muze nebo 'z' pro zenu.\n";
-        }
+    std::cout << "Zadej pohlavi (m/z): ";
+    char s{};
+    std::cin >> s;
+    clearCin();
+
+    if (s == 'z' || s == 'Z')
+    {
+        p.sex = Sex::Female;
+        p.eliminationRatePermilPerHour = 0.1; // Zeny maji obvykle nizsi odbouravani
+    }
+    else
+    {
+        p.sex = Sex::Male;
+        p.eliminationRatePermilPerHour = 0.15; // Muzi maji obvykle vyssi odbouravani
     }
 
     p.weightKg = inputValidatedDouble("Zadej vahu (kg): ", 30.0, 300.0);
@@ -92,11 +165,7 @@ std::vector<Drink> ConsoleUI::inputDrinks()
 {
     std::vector<Drink> drinks;
 
-    int n = inputValidatedInt("Kolik ruznych napoju jsi mel? (napr. 3): ", 1, 100);
-    double hours = inputValidatedDouble("Kolik hodin jsi pil? (napr. 2): ", 0.5, 24.0);
-
-    int totalMinutes = static_cast<int>(hours * 60);
-    int intervalMinutes = totalMinutes / std::max(1, n);
+    int n = inputImmediateInt("Kolik ruznych napoju jsi mel? (napr. 3): ", 1, 100);
 
     for (int i = 0; i < n; ++i)
     {
@@ -112,9 +181,7 @@ std::vector<Drink> ConsoleUI::inputDrinks()
             std::cout << "5. Cervene vino (200 ml, 12.5%)\n";
             std::cout << "6. Rum (50 ml, 40.0%)\n";
             std::cout << "7. Vlastni napoj\n";
-            std::cout << "Zadej cislo: ";
-
-            int choice = inputValidatedInt("", 1, 7);
+            int choice = inputImmediateInt("Zadej cislo: ", 1, 7);
 
             switch (choice)
             {
@@ -158,9 +225,6 @@ std::vector<Drink> ConsoleUI::inputDrinks()
                 break;
             }
 
-            d.startMinute = i * intervalMinutes;
-            d.endMinute = (i + 1) * intervalMinutes;
-
             drinks.push_back(d);
             break;
         }
@@ -171,44 +235,44 @@ std::vector<Drink> ConsoleUI::inputDrinks()
 
 void ConsoleUI::printSummary(const Person& p, const std::vector<Drink>& drinks, const BacResult& r)
 {
-    std::cout << "\n================ VYSLEDKY ================\n";
-    std::cout << "Osoba: " << ((p.sex == Sex::Male) ? "muz" : "zena")
-              << ", " << p.weightKg << " kg"
-              << ", " << p.heightCm << " cm"
-              << ", odbouravani " << p.eliminationRatePermilPerHour << " ‰/h\n\n";
+    printWithDelay("\n================ VYSLEDKY ================\n");
+    printWithDelay("Osoba: " + std::string((p.sex == Sex::Male) ? "muz" : "zena") +
+                   ", " + std::to_string(p.weightKg) + " kg" +
+                   ", " + std::to_string(p.heightCm) + " cm" +
+                   ", odbouravani " + std::to_string(p.eliminationRatePermilPerHour) + " ‰/h\n\n");
 
-    std::cout << "Zadane piti:\n";
+    printWithDelay("Zadane piti:\n");
     for (const auto& d : drinks)
     {
-        std::cout << " - " << d.name
-                  << " | " << d.volumeMl << " ml"
-                  << " | " << d.abvPercent << " %"
-                  << " | " << TimeUtils::minutesToHHMM(d.startMinute)
-                  << " - " << TimeUtils::minutesToHHMM(d.endMinute)
-                  << " | alkohol ~ " << std::fixed << std::setprecision(1)
-                  << d.pureAlcoholGrams() << " g\n";
+        printWithDelay(" - " + d.name +
+                       " | " + std::to_string(static_cast<int>(d.volumeMl * 10) / 10.0) + " ml" +
+                       " | " + std::to_string(static_cast<int>(d.abvPercent * 10) / 10.0) + " %" +
+                       " | " + TimeUtils::minutesToHHMM(d.startMinute) +
+                       " - " + TimeUtils::minutesToHHMM(d.endMinute) +
+                       " | alkohol ~ " + std::to_string(static_cast<int>(d.pureAlcoholGrams() * 10) / 10.0) + " g\n");
     }
 
-    std::cout << "\nPeak: " << std::fixed << std::setprecision(2)
-              << r.peakBacPermil << " ‰ v " << TimeUtils::minutesToHHMM(r.peakMinute) << "\n";
+    printWithDelay("\nPeak: " + std::to_string(static_cast<int>(r.peakBacPermil * 100) / 100.0) + " ‰ v " + TimeUtils::minutesToHHMM(r.peakMinute) + "\n");
 
     auto showTimeOrNA = [&](const char* label, int minute)
     {
-        std::cout << label << ": ";
-        if (minute < 0) std::cout << "nenalezeno v rozsahu simulace\n";
-        else std::cout << TimeUtils::minutesToHHMM(minute) << "\n";
+        if (minute < 0)
+            printWithDelay(std::string(label) + ": nenalezeno v rozsahu simulace\n");
+        else
+            printWithDelay(std::string(label) + ": " + TimeUtils::minutesToHHMM(minute) + "\n");
     };
 
     showTimeOrNA("Pod 0.5 ‰", r.soberMinute_0_5);
     showTimeOrNA("Pod 0.2 ‰", r.soberMinute_0_2);
     showTimeOrNA("0.0 ‰ (odhad \"strizlivy\")", r.soberMinute_0_0);
 
-    std::cout << "==========================================\n\n";
+    printWithDelay("==========================================\n\n");
 }
 
 void ConsoleUI::printAsciiGraph(const BacResult& r, int width, int stepMinutes)
 {
     const double maxBac = std::max(0.01, r.peakBacPermil);
+    int zeroCount = 0; // Counter for consecutive zero BAC rows
 
     for (int minute = r.simStartMinute; minute <= r.simEndMinute; minute += stepMinutes)
     {
@@ -220,7 +284,17 @@ void ConsoleUI::printAsciiGraph(const BacResult& r, int width, int stepMinutes)
 
         std::cout << TimeUtils::minutesToHHMM(minute) << " | ";
         for (int i = 0; i < bars; ++i) std::cout << '#';
-        std::cout << " " << std::fixed << std::setprecision(2) << bac << " ‰\n";
+        std::cout << " " << std::fixed << std::setprecision(1) << bac << " ‰\n";
+
+        if (bac == 0.0)
+        {
+            zeroCount++;
+            if (zeroCount >= 3) break; // Stop after 3 consecutive zero BAC rows
+        }
+        else
+        {
+            zeroCount = 0; // Reset counter if BAC is not zero
+        }
     }
 
     std::cout << "\n";
@@ -314,16 +388,6 @@ void ConsoleUI::run()
     const auto result = BacModel::simulate(p, drinks);
     printSummary(p, drinks, result);
     printAsciiGraph(result);
-
-    const std::string csvPath = "bac_curve.csv";
-    if (BacModel::exportCsv(csvPath, result))
-    {
-        std::cout << "CSV pro graf ulozeno do: " << csvPath << "\n";
-    }
-    else
-    {
-        std::cout << "Nepodarilo se ulozit CSV.\n";
-    }
 
     std::cout << "\nPamatuj, ze tyto vypocty jsou pouze orientacni. Bud opatrny a nerid pod vlivem alkoholu.\n";
 }
