@@ -112,6 +112,70 @@ static int inputImmediateInt(const std::string& prompt, int minValue, int maxVal
     return value;
 }
 
+static std::string inputImmediateString(const std::string& prompt)
+{
+    std::cout << prompt;
+    setTerminalMode(true);
+    std::string value;
+    char c;
+    while (true)
+    {
+        c = getchar();
+        if (c == '\n' || c == '\r')
+        {
+            std::cout << "\n";
+            break;
+        }
+        else if (c == '\b' || c == 127) // Backspace
+        {
+            if (!value.empty())
+            {
+                value.pop_back();
+                std::cout << "\b \b" << std::flush;
+            }
+        }
+        else
+        {
+            value += c;
+            std::cout << c << std::flush;
+        }
+    }
+    setTerminalMode(false);
+    return value;
+}
+
+static std::string inputImmediateTime(const std::string& prompt)
+{
+    std::cout << prompt;
+    setTerminalMode(true);
+    std::string value;
+    char c;
+    while (true)
+    {
+        c = getchar();
+        if (c == '\n' || c == '\r')
+        {
+            std::cout << "\n";
+            break;
+        }
+        else if (c == '\b' || c == 127) // Backspace
+        {
+            if (!value.empty())
+            {
+                value.pop_back();
+                std::cout << "\b \b" << std::flush;
+            }
+        }
+        else
+        {
+            value += c;
+            std::cout << c << std::flush;
+        }
+    }
+    setTerminalMode(false);
+    return value;
+}
+
 static void printWithDelay(const std::string& text, int delayMs = 50)
 {
     for (char c : text)
@@ -138,26 +202,34 @@ Person ConsoleUI::inputPerson()
     printWithDelay("Tento program vam pomuze odhadnout hladinu alkoholu v krvi.");
     printWithDelay("Zadejte sve udaje a informace o tom, co jste pili.\n");
 
-    std::cout << "Zadej pohlavi (m/z): ";
-    char s{};
-    std::cin >> s;
-    clearCin();
+    while (true)
+    {
+        std::cout << "Zadej pohlavi (m/z): ";
+        char s;
+        std::cin >> s;
+        clearCin();
 
-    if (s == 'z' || s == 'Z')
-    {
-        p.sex = Sex::Female;
-        p.eliminationRatePermilPerHour = 0.1; // Zeny maji obvykle nizsi odbouravani
-    }
-    else
-    {
-        p.sex = Sex::Male;
-        p.eliminationRatePermilPerHour = 0.15; // Muzi maji obvykle vyssi odbouravani
+        if (s == 'z' || s == 'Z')
+        {
+            p.sex = Sex::Female;
+            p.eliminationRatePermilPerHour = 0.1; // Zeny maji obvykle nizsi odbouravani
+            break;
+        }
+        else if (s == 'm' || s == 'M')
+        {
+            p.sex = Sex::Male;
+            p.eliminationRatePermilPerHour = 0.15; // Muzi maji obvykle vyssi odbouravani
+            break;
+        }
+        else
+        {
+            std::cout << "Neplatny vstup. Zadejte 'm' pro muze nebo 'z' pro zenu.\n";
+        }
     }
 
     p.weightKg = inputValidatedDouble("Zadej vahu (kg): ", 30.0, 300.0);
     p.heightCm = inputValidatedDouble("Zadej vysku (cm): ", 100.0, 250.0);
 
-    std::cout << "\n";
     return p;
 }
 
@@ -352,27 +424,21 @@ void ConsoleUI::run()
         return;
     }
 
-    std::cout << "Zadej cas, od kdy jsi pil (HH:MM, napr. 20:00): ";
-    std::string startTime;
-    std::getline(std::cin, startTime);
+    std::string startTime = inputImmediateTime("Zadej cas, od kdy jsi pil (HH:MM, napr. 20:00): ");
     int startMinute = TimeUtils::parseHHMMToMinutes(startTime);
 
     while (startMinute < 0)
     {
-        std::cout << "Neplatny cas. Zadej cas, od kdy jsi pil (HH:MM, napr. 20:00): ";
-        std::getline(std::cin, startTime);
+        startTime = inputImmediateTime("Neplatny cas. Zadej cas, od kdy jsi pil (HH:MM, napr. 20:00): ");
         startMinute = TimeUtils::parseHHMMToMinutes(startTime);
     }
 
-    std::cout << "Zadej cas, do kdy jsi pil (HH:MM, napr. 22:00): ";
-    std::string endTime;
-    std::getline(std::cin, endTime);
+    std::string endTime = inputImmediateTime("Zadej cas, do kdy jsi pil (HH:MM, napr. 22:00): ");
     int endMinute = TimeUtils::parseHHMMToMinutes(endTime);
 
     while (endMinute < 0 || endMinute <= startMinute)
     {
-        std::cout << "Neplatny cas. Zadej cas, do kdy jsi pil (HH:MM, napr. 22:00): ";
-        std::getline(std::cin, endTime);
+        endTime = inputImmediateTime("Neplatny cas. Zadej cas, do kdy jsi pil (HH:MM, napr. 22:00): ");
         endMinute = TimeUtils::parseHHMMToMinutes(endTime);
     }
 
