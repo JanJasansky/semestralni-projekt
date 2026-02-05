@@ -1,3 +1,5 @@
-/Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/CMakeFiles/AlcoholCalc.dir
+/Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/CMakeFiles/BACCalculator.dir
 /Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/CMakeFiles/edit_cache.dir
 /Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/CMakeFiles/rebuild_cache.dir
+/Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/CMakeFiles/BACCalculator_autogen_timestamp_deps.dir
+/Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/CMakeFiles/BACCalculator_autogen.dir

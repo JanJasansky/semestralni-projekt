@@ -117,24 +117,74 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named AlcoholCalc
+# Target rules for targets named BACCalculator
 
 # Build rule for target.
-AlcoholCalc: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 AlcoholCalc
-.PHONY : AlcoholCalc
+BACCalculator: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BACCalculator
+.PHONY : BACCalculator
 
 # fast build rule for target.
-AlcoholCalc/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlcoholCalc.dir/build.make CMakeFiles/AlcoholCalc.dir/build
-.PHONY : AlcoholCalc/fast
+BACCalculator/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BACCalculator.dir/build.make CMakeFiles/BACCalculator.dir/build
+.PHONY : BACCalculator/fast
+
+#=============================================================================
+# Target rules for targets named BACCalculator_autogen_timestamp_deps
+
+# Build rule for target.
+BACCalculator_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BACCalculator_autogen_timestamp_deps
+.PHONY : BACCalculator_autogen_timestamp_deps
+
+# fast build rule for target.
+BACCalculator_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BACCalculator_autogen_timestamp_deps.dir/build.make CMakeFiles/BACCalculator_autogen_timestamp_deps.dir/build
+.PHONY : BACCalculator_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named BACCalculator_autogen
+
+# Build rule for target.
+BACCalculator_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BACCalculator_autogen
+.PHONY : BACCalculator_autogen
+
+# fast build rule for target.
+BACCalculator_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BACCalculator_autogen.dir/build.make CMakeFiles/BACCalculator_autogen.dir/build
+.PHONY : BACCalculator_autogen/fast
+
+BACCalculator_autogen/mocs_compilation.o: BACCalculator_autogen/mocs_compilation.cpp.o
+.PHONY : BACCalculator_autogen/mocs_compilation.o
+
+# target to build an object file
+BACCalculator_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BACCalculator.dir/build.make CMakeFiles/BACCalculator.dir/BACCalculator_autogen/mocs_compilation.cpp.o
+.PHONY : BACCalculator_autogen/mocs_compilation.cpp.o
+
+BACCalculator_autogen/mocs_compilation.i: BACCalculator_autogen/mocs_compilation.cpp.i
+.PHONY : BACCalculator_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+BACCalculator_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BACCalculator.dir/build.make CMakeFiles/BACCalculator.dir/BACCalculator_autogen/mocs_compilation.cpp.i
+.PHONY : BACCalculator_autogen/mocs_compilation.cpp.i
+
+BACCalculator_autogen/mocs_compilation.s: BACCalculator_autogen/mocs_compilation.cpp.s
+.PHONY : BACCalculator_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+BACCalculator_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BACCalculator.dir/build.make CMakeFiles/BACCalculator.dir/BACCalculator_autogen/mocs_compilation.cpp.s
+.PHONY : BACCalculator_autogen/mocs_compilation.cpp.s
 
 src/BacModel.o: src/BacModel.cpp.o
 .PHONY : src/BacModel.o
 
 # target to build an object file
 src/BacModel.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlcoholCalc.dir/build.make CMakeFiles/AlcoholCalc.dir/src/BacModel.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BACCalculator.dir/build.make CMakeFiles/BACCalculator.dir/src/BacModel.cpp.o
 .PHONY : src/BacModel.cpp.o
 
 src/BacModel.i: src/BacModel.cpp.i
@@ -142,7 +192,7 @@ src/BacModel.i: src/BacModel.cpp.i
 
 # target to preprocess a source file
 src/BacModel.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlcoholCalc.dir/build.make CMakeFiles/AlcoholCalc.dir/src/BacModel.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BACCalculator.dir/build.make CMakeFiles/BACCalculator.dir/src/BacModel.cpp.i
 .PHONY : src/BacModel.cpp.i
 
 src/BacModel.s: src/BacModel.cpp.s
@@ -150,87 +200,63 @@ src/BacModel.s: src/BacModel.cpp.s
 
 # target to generate assembly for a file
 src/BacModel.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlcoholCalc.dir/build.make CMakeFiles/AlcoholCalc.dir/src/BacModel.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BACCalculator.dir/build.make CMakeFiles/BACCalculator.dir/src/BacModel.cpp.s
 .PHONY : src/BacModel.cpp.s
 
-src/ConsoleUI.o: src/ConsoleUI.cpp.o
-.PHONY : src/ConsoleUI.o
+src/MainWindow.o: src/MainWindow.cpp.o
+.PHONY : src/MainWindow.o
 
 # target to build an object file
-src/ConsoleUI.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlcoholCalc.dir/build.make CMakeFiles/AlcoholCalc.dir/src/ConsoleUI.cpp.o
-.PHONY : src/ConsoleUI.cpp.o
+src/MainWindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BACCalculator.dir/build.make CMakeFiles/BACCalculator.dir/src/MainWindow.cpp.o
+.PHONY : src/MainWindow.cpp.o
 
-src/ConsoleUI.i: src/ConsoleUI.cpp.i
-.PHONY : src/ConsoleUI.i
+src/MainWindow.i: src/MainWindow.cpp.i
+.PHONY : src/MainWindow.i
 
 # target to preprocess a source file
-src/ConsoleUI.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlcoholCalc.dir/build.make CMakeFiles/AlcoholCalc.dir/src/ConsoleUI.cpp.i
-.PHONY : src/ConsoleUI.cpp.i
+src/MainWindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BACCalculator.dir/build.make CMakeFiles/BACCalculator.dir/src/MainWindow.cpp.i
+.PHONY : src/MainWindow.cpp.i
 
-src/ConsoleUI.s: src/ConsoleUI.cpp.s
-.PHONY : src/ConsoleUI.s
+src/MainWindow.s: src/MainWindow.cpp.s
+.PHONY : src/MainWindow.s
 
 # target to generate assembly for a file
-src/ConsoleUI.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlcoholCalc.dir/build.make CMakeFiles/AlcoholCalc.dir/src/ConsoleUI.cpp.s
-.PHONY : src/ConsoleUI.cpp.s
+src/MainWindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BACCalculator.dir/build.make CMakeFiles/BACCalculator.dir/src/MainWindow.cpp.s
+.PHONY : src/MainWindow.cpp.s
 
-src/Drink.o: src/Drink.cpp.o
-.PHONY : src/Drink.o
+src/PythonPlotter.o: src/PythonPlotter.cpp.o
+.PHONY : src/PythonPlotter.o
 
 # target to build an object file
-src/Drink.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlcoholCalc.dir/build.make CMakeFiles/AlcoholCalc.dir/src/Drink.cpp.o
-.PHONY : src/Drink.cpp.o
+src/PythonPlotter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BACCalculator.dir/build.make CMakeFiles/BACCalculator.dir/src/PythonPlotter.cpp.o
+.PHONY : src/PythonPlotter.cpp.o
 
-src/Drink.i: src/Drink.cpp.i
-.PHONY : src/Drink.i
-
-# target to preprocess a source file
-src/Drink.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlcoholCalc.dir/build.make CMakeFiles/AlcoholCalc.dir/src/Drink.cpp.i
-.PHONY : src/Drink.cpp.i
-
-src/Drink.s: src/Drink.cpp.s
-.PHONY : src/Drink.s
-
-# target to generate assembly for a file
-src/Drink.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlcoholCalc.dir/build.make CMakeFiles/AlcoholCalc.dir/src/Drink.cpp.s
-.PHONY : src/Drink.cpp.s
-
-src/TimeUtils.o: src/TimeUtils.cpp.o
-.PHONY : src/TimeUtils.o
-
-# target to build an object file
-src/TimeUtils.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlcoholCalc.dir/build.make CMakeFiles/AlcoholCalc.dir/src/TimeUtils.cpp.o
-.PHONY : src/TimeUtils.cpp.o
-
-src/TimeUtils.i: src/TimeUtils.cpp.i
-.PHONY : src/TimeUtils.i
+src/PythonPlotter.i: src/PythonPlotter.cpp.i
+.PHONY : src/PythonPlotter.i
 
 # target to preprocess a source file
-src/TimeUtils.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlcoholCalc.dir/build.make CMakeFiles/AlcoholCalc.dir/src/TimeUtils.cpp.i
-.PHONY : src/TimeUtils.cpp.i
+src/PythonPlotter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BACCalculator.dir/build.make CMakeFiles/BACCalculator.dir/src/PythonPlotter.cpp.i
+.PHONY : src/PythonPlotter.cpp.i
 
-src/TimeUtils.s: src/TimeUtils.cpp.s
-.PHONY : src/TimeUtils.s
+src/PythonPlotter.s: src/PythonPlotter.cpp.s
+.PHONY : src/PythonPlotter.s
 
 # target to generate assembly for a file
-src/TimeUtils.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlcoholCalc.dir/build.make CMakeFiles/AlcoholCalc.dir/src/TimeUtils.cpp.s
-.PHONY : src/TimeUtils.cpp.s
+src/PythonPlotter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BACCalculator.dir/build.make CMakeFiles/BACCalculator.dir/src/PythonPlotter.cpp.s
+.PHONY : src/PythonPlotter.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlcoholCalc.dir/build.make CMakeFiles/AlcoholCalc.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BACCalculator.dir/build.make CMakeFiles/BACCalculator.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -238,7 +264,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlcoholCalc.dir/build.make CMakeFiles/AlcoholCalc.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BACCalculator.dir/build.make CMakeFiles/BACCalculator.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -246,7 +272,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlcoholCalc.dir/build.make CMakeFiles/AlcoholCalc.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BACCalculator.dir/build.make CMakeFiles/BACCalculator.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -257,19 +283,21 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... AlcoholCalc"
+	@echo "... BACCalculator_autogen"
+	@echo "... BACCalculator_autogen_timestamp_deps"
+	@echo "... BACCalculator"
+	@echo "... BACCalculator_autogen/mocs_compilation.o"
+	@echo "... BACCalculator_autogen/mocs_compilation.i"
+	@echo "... BACCalculator_autogen/mocs_compilation.s"
 	@echo "... src/BacModel.o"
 	@echo "... src/BacModel.i"
 	@echo "... src/BacModel.s"
-	@echo "... src/ConsoleUI.o"
-	@echo "... src/ConsoleUI.i"
-	@echo "... src/ConsoleUI.s"
-	@echo "... src/Drink.o"
-	@echo "... src/Drink.i"
-	@echo "... src/Drink.s"
-	@echo "... src/TimeUtils.o"
-	@echo "... src/TimeUtils.i"
-	@echo "... src/TimeUtils.s"
+	@echo "... src/MainWindow.o"
+	@echo "... src/MainWindow.i"
+	@echo "... src/MainWindow.s"
+	@echo "... src/PythonPlotter.o"
+	@echo "... src/PythonPlotter.i"
+	@echo "... src/PythonPlotter.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_BACCalculator_FILE /Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/BACCalculator)
+set(__QT_DEPLOY_TARGET_BACCalculator_TYPE EXECUTABLE)

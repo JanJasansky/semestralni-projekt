@@ -1,8 +1,10 @@
-#include "ConsoleUI.hpp"
+#include "MainWindow.h"
+#include <QApplication>
 
-int main()
-{
-    ConsoleUI ui;
-    ui.run();
-    return 0;
+int main(int argc, char** argv) {
+    QApplication app(argc, argv);
+    MainWindow w;
+    w.resize(1200, 700);
+    w.show();
+    return app.exec();
 }
