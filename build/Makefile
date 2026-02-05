@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named copy_assets
+
+# Build rule for target.
+copy_assets: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 copy_assets
+.PHONY : copy_assets
+
+# fast build rule for target.
+copy_assets/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/copy_assets.dir/build.make CMakeFiles/copy_assets.dir/build
+.PHONY : copy_assets/fast
+
+#=============================================================================
 # Target rules for targets named BACCalculator
 
 # Build rule for target.
@@ -154,6 +167,30 @@ BACCalculator_autogen: cmake_check_build_system
 BACCalculator_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BACCalculator_autogen.dir/build.make CMakeFiles/BACCalculator_autogen.dir/build
 .PHONY : BACCalculator_autogen/fast
+
+BACCalculator_autogen/EWIEGA46WW/qrc_resources.o: BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp.o
+.PHONY : BACCalculator_autogen/EWIEGA46WW/qrc_resources.o
+
+# target to build an object file
+BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BACCalculator.dir/build.make CMakeFiles/BACCalculator.dir/BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp.o
+.PHONY : BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp.o
+
+BACCalculator_autogen/EWIEGA46WW/qrc_resources.i: BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp.i
+.PHONY : BACCalculator_autogen/EWIEGA46WW/qrc_resources.i
+
+# target to preprocess a source file
+BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BACCalculator.dir/build.make CMakeFiles/BACCalculator.dir/BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp.i
+.PHONY : BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp.i
+
+BACCalculator_autogen/EWIEGA46WW/qrc_resources.s: BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp.s
+.PHONY : BACCalculator_autogen/EWIEGA46WW/qrc_resources.s
+
+# target to generate assembly for a file
+BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BACCalculator.dir/build.make CMakeFiles/BACCalculator.dir/BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp.s
+.PHONY : BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp.s
 
 BACCalculator_autogen/mocs_compilation.o: BACCalculator_autogen/mocs_compilation.cpp.o
 .PHONY : BACCalculator_autogen/mocs_compilation.o
@@ -285,7 +322,11 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... BACCalculator_autogen"
 	@echo "... BACCalculator_autogen_timestamp_deps"
+	@echo "... copy_assets"
 	@echo "... BACCalculator"
+	@echo "... BACCalculator_autogen/EWIEGA46WW/qrc_resources.o"
+	@echo "... BACCalculator_autogen/EWIEGA46WW/qrc_resources.i"
+	@echo "... BACCalculator_autogen/EWIEGA46WW/qrc_resources.s"
 	@echo "... BACCalculator_autogen/mocs_compilation.o"
 	@echo "... BACCalculator_autogen/mocs_compilation.i"
 	@echo "... BACCalculator_autogen/mocs_compilation.s"

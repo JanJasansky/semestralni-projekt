@@ -1,3 +1,4 @@
+/Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/CMakeFiles/copy_assets.dir
 /Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/CMakeFiles/BACCalculator.dir
 /Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/CMakeFiles/edit_cache.dir
 /Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/CMakeFiles/rebuild_cache.dir

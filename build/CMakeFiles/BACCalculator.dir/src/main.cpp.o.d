@@ -971,63 +971,7 @@ CMakeFiles/BACCalculator.dir/src/main.cpp.o: \
   /opt/homebrew/lib/QtGui.framework/Headers/qcursor.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qbitmap.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qtabwidget.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QLabel \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qlabel.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qframe.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qpicture.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qiodevice.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qtextdocument.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qurl.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QComboBox \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qcombobox.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractitemdelegate.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qstyleoption.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qlocale.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractspinbox.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qvalidator.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qregularexpression.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qslider.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractslider.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qstyle.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qtabbar.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qrubberband.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qabstractitemmodel.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QLineEdit \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qlineedit.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qtextcursor.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qtextformat.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qpen.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qtextoption.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QPushButton \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qpushbutton.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractbutton.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QRadioButton \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qradiobutton.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QButtonGroup \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qbuttongroup.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QDateTimeEdit \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qdatetimeedit.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qtimezone.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qdatetime.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qcalendar.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QVBoxLayout \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qboxlayout.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qlayout.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qlayoutitem.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qgridlayout.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QHBoxLayout \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QGroupBox \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qgroupbox.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QTableWidget \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qtablewidget.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qtableview.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractitemview.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractscrollarea.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qitemselectionmodel.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QStackedWidget \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qstackedwidget.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QSpinBox \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qspinbox.h \
+  /Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/src/BacModel.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QApplication \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qapplication.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qcoreapplication.h \
@@ -1040,4 +984,6 @@ CMakeFiles/BACCalculator.dir/src/main.cpp.o: \
   /opt/homebrew/lib/QtCore.framework/Headers/qcoreapplication_platform.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qguiapplication.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qinputmethod.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qguiapplication_platform.h
+  /opt/homebrew/lib/QtCore.framework/Headers/qlocale.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qguiapplication_platform.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/QIcon

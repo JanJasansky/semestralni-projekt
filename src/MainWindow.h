@@ -1,18 +1,19 @@
 #pragma once
-#include <QMainWindow>
-#include <QLabel>
-#include <QComboBox>
-#include <QLineEdit>
-#include <QPushButton>
-#include <QRadioButton>
-#include <QButtonGroup>
-#include <QDateTimeEdit>
-#include <QVBoxLayout>
-#include <QHBoxLayout>
-#include <QGroupBox>
-#include <QTableWidget>
-#include <QStackedWidget>
-#include <QSpinBox>
+
+#include <QMainWindow>   
+#include "BacModel.h"
+
+class QLineEdit;
+class QComboBox;
+class QButtonGroup;
+class QRadioButton;
+class QDateTimeEdit;
+class QStackedWidget;
+class QPushButton;
+class QSpinBox;
+class QTableWidget;
+class QLabel;
+class QCheckBox;
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
@@ -22,10 +23,13 @@ public:
 private slots:
     void onCalculate();
     void onAddDrink();
+    void onRemoveDrink();
+    void onEditDrink();
     void onModeSimplified();
     void onModeDetailed();
     void onDrinkTypeChanged();
     void onDrinkSizeChanged();
+    void onToggleTheme();
 
 private:
     QLineEdit* weightEdit;
@@ -39,24 +43,36 @@ private:
     QPushButton* simplifiedBtn;
     QPushButton* detailedBtn;
 
-    // Simplified mode
     QSpinBox* simpleDrinkCount;
 
-    // Detailed mode
     QComboBox* drinkTypeCombo;
     QComboBox* drinkSizeCombo;
     QSpinBox* drinkCountSpin;
     QLineEdit* drinkVolumeEdit;
     QLineEdit* drinkAbvEdit;
     QPushButton* addDrinkBtn;
+    QPushButton* removeDrinkBtn;
+    QPushButton* editDrinkBtn;
     QTableWidget* drinksTable;
 
     QLabel* resultBac;
     QLabel* resultDrive;
     QLabel* resultSober;
+    QLabel* resultSoberTime;
+    QLabel* resultTargetStatus;
+    QLabel* resultTargetDrive;
+    QLabel* resultMaxBeers;
     QLabel* plotLabel;
+
+    QCheckBox* targetSoberCheck;
+    QDateTimeEdit* targetSoberEdit;
+
+    QPushButton* themeBtn;
+    bool darkMode = false;
 
     void setupUi();
     void updateDrinkDefaults();
+    void applyTheme();
     double totalAlcoholGramsFromTable() const;
+    int calculateMaxBeers(double weightKg, Gender gender, double hoursUntilTarget) const;
 };

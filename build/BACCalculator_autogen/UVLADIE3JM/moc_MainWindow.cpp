@@ -7,7 +7,6 @@
 *****************************************************************************/
 
 #include "../../../src/MainWindow.h"
-#include <QtGui/qtextcursor.h>
 #include <QtCore/qmetatype.h>
 
 #include <QtCore/qtmochelpers.h>
@@ -43,10 +42,13 @@ template <> constexpr inline auto MainWindow::qt_create_metaobjectdata<qt_meta_t
         "onCalculate",
         "",
         "onAddDrink",
+        "onRemoveDrink",
+        "onEditDrink",
         "onModeSimplified",
         "onModeDetailed",
         "onDrinkTypeChanged",
-        "onDrinkSizeChanged"
+        "onDrinkSizeChanged",
+        "onToggleTheme"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -54,14 +56,20 @@ template <> constexpr inline auto MainWindow::qt_create_metaobjectdata<qt_meta_t
         QtMocHelpers::SlotData<void()>(1, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'onAddDrink'
         QtMocHelpers::SlotData<void()>(3, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'onModeSimplified'
+        // Slot 'onRemoveDrink'
         QtMocHelpers::SlotData<void()>(4, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'onModeDetailed'
+        // Slot 'onEditDrink'
         QtMocHelpers::SlotData<void()>(5, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'onDrinkTypeChanged'
+        // Slot 'onModeSimplified'
         QtMocHelpers::SlotData<void()>(6, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'onDrinkSizeChanged'
+        // Slot 'onModeDetailed'
         QtMocHelpers::SlotData<void()>(7, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'onDrinkTypeChanged'
+        QtMocHelpers::SlotData<void()>(8, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'onDrinkSizeChanged'
+        QtMocHelpers::SlotData<void()>(9, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'onToggleTheme'
+        QtMocHelpers::SlotData<void()>(10, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -87,10 +95,13 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         switch (_id) {
         case 0: _t->onCalculate(); break;
         case 1: _t->onAddDrink(); break;
-        case 2: _t->onModeSimplified(); break;
-        case 3: _t->onModeDetailed(); break;
-        case 4: _t->onDrinkTypeChanged(); break;
-        case 5: _t->onDrinkSizeChanged(); break;
+        case 2: _t->onRemoveDrink(); break;
+        case 3: _t->onEditDrink(); break;
+        case 4: _t->onModeSimplified(); break;
+        case 5: _t->onModeDetailed(); break;
+        case 6: _t->onDrinkTypeChanged(); break;
+        case 7: _t->onDrinkSizeChanged(); break;
+        case 8: _t->onToggleTheme(); break;
         default: ;
         }
     }
@@ -116,14 +127,14 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 9)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 9;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 6)
+        if (_id < 9)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 6;
+        _id -= 9;
     }
     return _id;
 }

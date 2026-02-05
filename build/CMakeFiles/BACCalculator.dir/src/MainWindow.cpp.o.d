@@ -971,13 +971,17 @@ CMakeFiles/BACCalculator.dir/src/MainWindow.cpp.o: \
   /opt/homebrew/lib/QtGui.framework/Headers/qcursor.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qbitmap.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qtabwidget.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QLabel \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qlabel.h \
+  /Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/src/BacModel.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QWidget \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QLineEdit \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qlineedit.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qframe.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qpicture.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/qiodevice.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qtextcursor.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qtextdocument.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qurl.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qtextformat.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qpen.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qtextoption.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QComboBox \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qcombobox.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractitemdelegate.h \
@@ -992,19 +996,9 @@ CMakeFiles/BACCalculator.dir/src/MainWindow.cpp.o: \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qtabbar.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qrubberband.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qabstractitemmodel.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QLineEdit \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qlineedit.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qtextcursor.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qtextformat.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qpen.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/qtextoption.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QPushButton \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qpushbutton.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractbutton.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QRadioButton \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qradiobutton.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QButtonGroup \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qbuttongroup.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QDateTimeEdit \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qdatetimeedit.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qtimezone.h \
@@ -1016,6 +1010,7 @@ CMakeFiles/BACCalculator.dir/src/MainWindow.cpp.o: \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qlayoutitem.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qgridlayout.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QHBoxLayout \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QGridLayout \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QGroupBox \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qgroupbox.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QTableWidget \
@@ -1024,13 +1019,22 @@ CMakeFiles/BACCalculator.dir/src/MainWindow.cpp.o: \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractitemview.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qabstractscrollarea.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qitemselectionmodel.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QTableWidgetItem \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QStackedWidget \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qstackedwidget.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QSpinBox \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qspinbox.h \
-  /Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/src/BacModel.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QRadioButton \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qradiobutton.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QButtonGroup \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qbuttongroup.h \
   /Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/src/PythonPlotter.h \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/QGridLayout \
+  /opt/homebrew/lib/QtCore.framework/Headers/Qt \
+  /opt/homebrew/lib/QtCore.framework/Headers/QDateTime \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QLabel \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qlabel.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qpicture.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qiodevice.h \
   /opt/homebrew/lib/QtGui.framework/Headers/QPixmap \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QHeaderView \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qheaderview.h \
@@ -1076,4 +1080,21 @@ CMakeFiles/BACCalculator.dir/src/MainWindow.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/path_iterator.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/u8path.h \
-  /opt/homebrew/lib/QtCore.framework/Headers/QTextStream
+  /opt/homebrew/lib/QtCore.framework/Headers/QTextStream \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QCheckBox \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qcheckbox.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QInputDialog \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qinputdialog.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QApplication \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qapplication.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qcoreapplication.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qcoreevent.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qbasictimer.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qabstracteventdispatcher.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qeventloop.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qdeadlinetimer.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qnativeinterface.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qcoreapplication_platform.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qguiapplication.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qinputmethod.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/qguiapplication_platform.h

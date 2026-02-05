@@ -1,3 +1,5 @@
 # Hashes of file build rules.
+03436d63cd450e384494733712c93a16 BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp
 03c262f0be8749541005e8ee79ea50d9 BACCalculator_autogen/timestamp
 abf14c27e701c9e94cea6c11e5077567 CMakeFiles/BACCalculator_autogen
+0f6b15afe9e81bcf0f781967e8adf811 CMakeFiles/copy_assets

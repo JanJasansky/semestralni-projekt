@@ -76,13 +76,21 @@ BACCalculator_autogen/timestamp: CMakeFiles/BACCalculator.dir/compiler_depend.ts
 	/opt/homebrew/bin/cmake -E cmake_autogen /Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/CMakeFiles/BACCalculator_autogen.dir/AutogenInfo.json ""
 	/opt/homebrew/bin/cmake -E touch /Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/BACCalculator_autogen/timestamp
 
+BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp: /Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/resources.qrc
+BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp: CMakeFiles/BACCalculator_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json
+BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp: /Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/icons/icon.svg
+BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp: /opt/homebrew/share/qt/libexec/rcc
+BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp: /opt/homebrew/share/qt/libexec/rcc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Automatic RCC for resources.qrc"
+	/opt/homebrew/bin/cmake -E cmake_autorcc /Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/CMakeFiles/BACCalculator_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json 
+
 CMakeFiles/BACCalculator.dir/codegen:
 .PHONY : CMakeFiles/BACCalculator.dir/codegen
 
 CMakeFiles/BACCalculator.dir/BACCalculator_autogen/mocs_compilation.cpp.o: CMakeFiles/BACCalculator.dir/flags.make
 CMakeFiles/BACCalculator.dir/BACCalculator_autogen/mocs_compilation.cpp.o: BACCalculator_autogen/mocs_compilation.cpp
 CMakeFiles/BACCalculator.dir/BACCalculator_autogen/mocs_compilation.cpp.o: CMakeFiles/BACCalculator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/BACCalculator.dir/BACCalculator_autogen/mocs_compilation.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/BACCalculator.dir/BACCalculator_autogen/mocs_compilation.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BACCalculator.dir/BACCalculator_autogen/mocs_compilation.cpp.o -MF CMakeFiles/BACCalculator.dir/BACCalculator_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/BACCalculator.dir/BACCalculator_autogen/mocs_compilation.cpp.o -c /Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/BACCalculator_autogen/mocs_compilation.cpp
 
 CMakeFiles/BACCalculator.dir/BACCalculator_autogen/mocs_compilation.cpp.i: cmake_force
@@ -96,7 +104,7 @@ CMakeFiles/BACCalculator.dir/BACCalculator_autogen/mocs_compilation.cpp.s: cmake
 CMakeFiles/BACCalculator.dir/src/main.cpp.o: CMakeFiles/BACCalculator.dir/flags.make
 CMakeFiles/BACCalculator.dir/src/main.cpp.o: /Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/src/main.cpp
 CMakeFiles/BACCalculator.dir/src/main.cpp.o: CMakeFiles/BACCalculator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/BACCalculator.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/BACCalculator.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BACCalculator.dir/src/main.cpp.o -MF CMakeFiles/BACCalculator.dir/src/main.cpp.o.d -o CMakeFiles/BACCalculator.dir/src/main.cpp.o -c /Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/src/main.cpp
 
 CMakeFiles/BACCalculator.dir/src/main.cpp.i: cmake_force
@@ -110,7 +118,7 @@ CMakeFiles/BACCalculator.dir/src/main.cpp.s: cmake_force
 CMakeFiles/BACCalculator.dir/src/MainWindow.cpp.o: CMakeFiles/BACCalculator.dir/flags.make
 CMakeFiles/BACCalculator.dir/src/MainWindow.cpp.o: /Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/src/MainWindow.cpp
 CMakeFiles/BACCalculator.dir/src/MainWindow.cpp.o: CMakeFiles/BACCalculator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/BACCalculator.dir/src/MainWindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/BACCalculator.dir/src/MainWindow.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BACCalculator.dir/src/MainWindow.cpp.o -MF CMakeFiles/BACCalculator.dir/src/MainWindow.cpp.o.d -o CMakeFiles/BACCalculator.dir/src/MainWindow.cpp.o -c /Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/src/MainWindow.cpp
 
 CMakeFiles/BACCalculator.dir/src/MainWindow.cpp.i: cmake_force
@@ -124,7 +132,7 @@ CMakeFiles/BACCalculator.dir/src/MainWindow.cpp.s: cmake_force
 CMakeFiles/BACCalculator.dir/src/BacModel.cpp.o: CMakeFiles/BACCalculator.dir/flags.make
 CMakeFiles/BACCalculator.dir/src/BacModel.cpp.o: /Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/src/BacModel.cpp
 CMakeFiles/BACCalculator.dir/src/BacModel.cpp.o: CMakeFiles/BACCalculator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/BACCalculator.dir/src/BacModel.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/BACCalculator.dir/src/BacModel.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BACCalculator.dir/src/BacModel.cpp.o -MF CMakeFiles/BACCalculator.dir/src/BacModel.cpp.o.d -o CMakeFiles/BACCalculator.dir/src/BacModel.cpp.o -c /Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/src/BacModel.cpp
 
 CMakeFiles/BACCalculator.dir/src/BacModel.cpp.i: cmake_force
@@ -138,7 +146,7 @@ CMakeFiles/BACCalculator.dir/src/BacModel.cpp.s: cmake_force
 CMakeFiles/BACCalculator.dir/src/PythonPlotter.cpp.o: CMakeFiles/BACCalculator.dir/flags.make
 CMakeFiles/BACCalculator.dir/src/PythonPlotter.cpp.o: /Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/src/PythonPlotter.cpp
 CMakeFiles/BACCalculator.dir/src/PythonPlotter.cpp.o: CMakeFiles/BACCalculator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/BACCalculator.dir/src/PythonPlotter.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/BACCalculator.dir/src/PythonPlotter.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BACCalculator.dir/src/PythonPlotter.cpp.o -MF CMakeFiles/BACCalculator.dir/src/PythonPlotter.cpp.o.d -o CMakeFiles/BACCalculator.dir/src/PythonPlotter.cpp.o -c /Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/src/PythonPlotter.cpp
 
 CMakeFiles/BACCalculator.dir/src/PythonPlotter.cpp.i: cmake_force
@@ -149,13 +157,28 @@ CMakeFiles/BACCalculator.dir/src/PythonPlotter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BACCalculator.dir/src/PythonPlotter.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/src/PythonPlotter.cpp -o CMakeFiles/BACCalculator.dir/src/PythonPlotter.cpp.s
 
+CMakeFiles/BACCalculator.dir/BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp.o: CMakeFiles/BACCalculator.dir/flags.make
+CMakeFiles/BACCalculator.dir/BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp.o: BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp
+CMakeFiles/BACCalculator.dir/BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp.o: CMakeFiles/BACCalculator.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/BACCalculator.dir/BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BACCalculator.dir/BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp.o -MF CMakeFiles/BACCalculator.dir/BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp.o.d -o CMakeFiles/BACCalculator.dir/BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp.o -c /Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp
+
+CMakeFiles/BACCalculator.dir/BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BACCalculator.dir/BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp > CMakeFiles/BACCalculator.dir/BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp.i
+
+CMakeFiles/BACCalculator.dir/BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BACCalculator.dir/BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp -o CMakeFiles/BACCalculator.dir/BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp.s
+
 # Object files for target BACCalculator
 BACCalculator_OBJECTS = \
 "CMakeFiles/BACCalculator.dir/BACCalculator_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/BACCalculator.dir/src/main.cpp.o" \
 "CMakeFiles/BACCalculator.dir/src/MainWindow.cpp.o" \
 "CMakeFiles/BACCalculator.dir/src/BacModel.cpp.o" \
-"CMakeFiles/BACCalculator.dir/src/PythonPlotter.cpp.o"
+"CMakeFiles/BACCalculator.dir/src/PythonPlotter.cpp.o" \
+"CMakeFiles/BACCalculator.dir/BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp.o"
 
 # External object files for target BACCalculator
 BACCalculator_EXTERNAL_OBJECTS =
@@ -165,12 +188,13 @@ BACCalculator: CMakeFiles/BACCalculator.dir/src/main.cpp.o
 BACCalculator: CMakeFiles/BACCalculator.dir/src/MainWindow.cpp.o
 BACCalculator: CMakeFiles/BACCalculator.dir/src/BacModel.cpp.o
 BACCalculator: CMakeFiles/BACCalculator.dir/src/PythonPlotter.cpp.o
+BACCalculator: CMakeFiles/BACCalculator.dir/BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp.o
 BACCalculator: CMakeFiles/BACCalculator.dir/build.make
 BACCalculator: /opt/homebrew/lib/QtWidgets.framework/Versions/A/QtWidgets
 BACCalculator: /opt/homebrew/lib/QtGui.framework/Versions/A/QtGui
 BACCalculator: /opt/homebrew/lib/QtCore.framework/Versions/A/QtCore
 BACCalculator: CMakeFiles/BACCalculator.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable BACCalculator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable BACCalculator"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BACCalculator.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -181,6 +205,7 @@ CMakeFiles/BACCalculator.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/BACCalculator.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/BACCalculator.dir/clean
 
+CMakeFiles/BACCalculator.dir/depend: BACCalculator_autogen/EWIEGA46WW/qrc_resources.cpp
 CMakeFiles/BACCalculator.dir/depend: BACCalculator_autogen/timestamp
 	cd /Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt /Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt /Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build /Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build /Users/janjasansky/Desktop/Semestralni-rpojekt/semestralni-projekt/build/CMakeFiles/BACCalculator.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/BACCalculator.dir/depend
