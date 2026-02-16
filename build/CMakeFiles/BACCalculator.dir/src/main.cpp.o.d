@@ -986,4 +986,6 @@ CMakeFiles/BACCalculator.dir/src/main.cpp.o: \
   /opt/homebrew/lib/QtGui.framework/Headers/qinputmethod.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qlocale.h \
   /opt/homebrew/lib/QtGui.framework/Headers/qguiapplication_platform.h \
-  /opt/homebrew/lib/QtGui.framework/Headers/QIcon
+  /opt/homebrew/lib/QtGui.framework/Headers/QIcon \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QStyleFactory \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qstylefactory.h
